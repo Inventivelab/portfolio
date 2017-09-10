@@ -1,0 +1,10 @@
+<h1>Home</h1>
+
+<h1>Blogs Post</h1>
+<%= @posts.inspect %>
+
+<h1>Skills</h1>
+<%= @skills.each do |skill| %>
+  <h2><%= skill.title %></h2
+  <p><%= skill.percent_utilized %></p>
+<% end %>
