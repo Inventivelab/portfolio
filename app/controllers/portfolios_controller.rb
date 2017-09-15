@@ -1,2 +1,49 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @portfolios = Portfolio.all
+  end
+
+  def new
+    @portfolio = Portfolio.new
+  end
+
+  def create
+    @portfolio = Portfolio.new(portfolio_params)
+    if @portfolio.save
+      redirect_to @portfolio, notice: "Your portfolio is now published"
+    else
+      render :new
+    end
+  end
+
+  def edit
+
+  end
+
+  def update
+    if @portfolio.update(portfolio_params)
+      redirect_to @portfolio, notice: "Your portfolio updated"
+    else
+      render :edit
+    end
+  end
+
+  def show
+  end
+
+  def destroy
+    @portfolio.destroy
+    redirect_to portfolios_path
+  end
+
+  private
+  def set_portfolio
+    @portfolio = Portfolio.find(params[:id])
+  end
+
+  def portfolio_params
+    params.require(:portfolio).permit(:title, :subtitle, :body, :display_image, :thumb_image)
+  end
 end
