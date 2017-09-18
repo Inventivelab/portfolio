@@ -2,10 +2,14 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @portfolios = Portfolio.all
+    @portfolios = Portfolio.all
     # @portfolios = Portfolio.javascript
-    @portfolios = Portfolio.ruby_on_rails_portfolio_items
+    # @portfolios = Portfolio.ruby_on_rails_portfolio_items
     # @portfolios = Portfolio.where(subtitle: 'Javasscript')
+  end
+
+  def rubyonrails
+    @portfolios = Portfolio.ruby_on_rails_portfolio_items
   end
 
   def javascript
