@@ -23,7 +23,7 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio = Portfolio.new(portfolio_params)
     if @portfolio.save
-      redirect_to @portfolio, notice: "Your portfolio is now published"
+      redirect_to portfolio_show_path(@portfolio), notice: "Your portfolio is now published"
     else
       render :new
     end
@@ -35,7 +35,7 @@ class PortfoliosController < ApplicationController
 
   def update
     if @portfolio.update(portfolio_params)
-      redirect_to @portfolio, notice: "Your portfolio updated"
+      redirect_to portfolio_show_path(@portfolio), notice: "Your portfolio updated"
     else
       render :edit
     end
