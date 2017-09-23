@@ -1,2 +1,8 @@
 <h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<p><%= number_to_phone "+151278901234"%></p>
+<p><%= number_to_currency "340" %></p>
+<p><%= number_to_percentage "890" %></p>
+<p><%= number_to_currency "340", unit: "N" %></p>
+<p><%= number_with_delimiter "346790988" %></p>
+ <p><%= number_to_currency("346790988", :unit => "N", :separator => ".", :delimiter => ",") %></p>
+<p><%#= number_to_currency "340", locale: :fr %></p>
