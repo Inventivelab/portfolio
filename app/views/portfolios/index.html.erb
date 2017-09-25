@@ -1,6 +1,9 @@
 <h1>Portfolios</h1>
 <%= link_to "Create New", new_portfolio_path %>
-<%= render @portfolios %>
+<% cache do %> //to load fast
+  <%= render partial: @portfolios, spacer_template: 'portfolio_ruler' %>
+<% end %>
+<%#= render partial: 'portfolio_item', collection: @portfolio_items %>
 
 
 

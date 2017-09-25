@@ -5,8 +5,17 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
-    @page_title = "Inventive Blog"
   end
+
+  # def index
+  #   @blogs = Blog.special_blogs
+  #   # #puts debugging
+  #   # puts "*" * 500
+  #   # puts @blogs.inspect
+  #   # puts "*" * 500
+  #   byebug
+  #   @page_title = "Inventive Blog"
+  # end
 
   # GET /blogs/1
   # GET /blogs/1.json
