@@ -19,4 +19,8 @@ module ApplicationHelper
   def sample_helper
     content_tag(:div, "My content", class: "My class")
   end
+
+  def copyright_generator
+    InventiveLabsViewTool::Renderer.copyright 'Said Maadan', 'All rights reserved'
+  end
 end

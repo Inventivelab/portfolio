@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/saidmaadan/inventive_labs_view_tool
+  revision: cefa79c536129cc54e9cc4f89c994f6fb27a50c7
+  specs:
+    inventive_labs_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -192,6 +198,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.3)
   friendly_id (~> 5.1.0)
+  inventive_labs_view_tool!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
