@@ -13,19 +13,26 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-    <%= render 'shared/nav', location: 'top' %>
+          <%= render 'shared/application_nav', location: 'top' %>
 
-    <h2>Howdy <%= current_user.first_name %>?</h2>
+          <h2>Howdy <%= current_user.first_name %>?</h2>
 
-    <%= login_helper %>
-    <%= yield %>
-    <%= source_helper("application") %>
-      <!-- <%# if session[:source] %>
-        <p>Thanks for visiing from <%= session[:source] %></p>
-      <%# end %> -->
-      <%= copyright_generator %>
-  </body>
+          <%= login_helper %>
+          <%= yield %>
+          <%= source_helper("application") %>
+          <%= copyright_generator %>
+          
+          <!-- <%# if session[:source] %>
+            <p>Thanks for visiing from <%= session[:source] %></p>
+          <%# end %> -->
+        </div>
+      </div>
+    </div>
+</body>
+
+
 </html>
