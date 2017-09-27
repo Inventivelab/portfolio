@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
   layout "portfolio"
+  access all: [:show, :index, rubyonrails, javascript], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   def index
     @portfolios = Portfolio.all
     # @portfolios = Portfolio.javascript
