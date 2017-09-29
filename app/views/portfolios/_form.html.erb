@@ -1,27 +1,38 @@
 <%= form_for(@portfolio) do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+      <div class="form-group">
+        <%= f.label :subtitle %>
+        <%= f.text_field :subtitle, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "form-control", rows: 15 %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
-  <ul>
+
+  <hr>
+  <div class="col-md-12"></div>
+  <h2>Technologies Used:</h2>
+  <div>
     <%= f.fields_for :technologies do |technology_form| %>
-      <li><%= technology_form.label :name%></li>
-      <li><%= technology_form.text_field :name%></li>
+      <div class="form-group">
+        <%= technology_form.label :name%>
+        <%= technology_form.text_field :name, class: "form-control"%></div>
     <% end %>
-  </ul>
+  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -13,7 +13,7 @@
 
   <body>
     <%= render "shared/portfolio_nav" %>
-    <%= render "shared/portfolio_main" %>
+    <%= render "shared/portfolio_main" if !logged_in?(:site_admin) %>
 
     <%#= render 'shared/nav', location: 'top' %>
     <!-- <h2>Howdy <%#= current_user.first_name %>?</h2> -->
