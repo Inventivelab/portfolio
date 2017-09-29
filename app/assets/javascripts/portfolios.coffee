@@ -25,4 +25,4 @@ myMoveable = ->
     return
   return
 
-$(document).ready(myMoveable)
+$(document).ready myMoveable
