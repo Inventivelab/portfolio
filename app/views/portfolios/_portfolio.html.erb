@@ -1,9 +1,9 @@
-<div class="card">
+<div class="card" data-id="<%= portfolio.id %>">
   <%= image_tag portfolio.thumb_image if !portfolio.thumb_image.nil? %>
   <p class="card-text"><span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
   </p>
 </div>
 
 
-<%#= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %> 
+<%#= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %>
 <%#= link_to 'Delete', portfolio, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
