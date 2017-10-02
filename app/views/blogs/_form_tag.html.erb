@@ -1,0 +1,15 @@
+<%= form_tag(blogs_path) do %>
+  <div class="form-group">
+    <%= label_tag :title %>
+    <%= text_field_tag 'blog[title]', blog.title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :body %>
+    <%= text_area_tag 'blog[body]', blog.body, class: "form-control", rows: 15 %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag 'Save', class: "btn btn-primary" %>
+  </div>
+<% end %>
