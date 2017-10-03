@@ -30,6 +30,7 @@ module ApplicationHelper
       {url:about_path, title: 'About'},
       {url:portfolios_path, title: 'Portfolios'},
       {url:blogs_path, title: 'Blogs'},
+      {url:tech_news_path, title: 'Tech-News'},
       {url:contact_path, title: 'Contact'}
     ]
   end
