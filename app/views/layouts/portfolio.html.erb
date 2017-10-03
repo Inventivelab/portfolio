@@ -19,6 +19,7 @@
     <!-- <h2>Howdy <%#= current_user.first_name %>?</h2> -->
 
     <%= yield %>
+    <%= alerts %>
     <%= source_helper("portfolio") %>
     <%= render 'shared/portfolio_footer' %>
       <!-- <%# if session[:source] %>

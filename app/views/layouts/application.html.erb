@@ -34,7 +34,8 @@
           <!-- <%# if session[:source] %>
             <p>Thanks for visiing from <%= session[:source] %></p>
           <%# end %> -->
-          <%= render 'shared/alert' %>
+          <%= alerts %>
+          <%#= render 'shared/alert' %>
           <%= render 'shared/application_footer' %>
         </div>
       </div>

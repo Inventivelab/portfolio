@@ -1,7 +1,8 @@
 <%= form_for(@portfolio) do |f| %>
   <% if portfolio.errors.any? %>
-    <% portfolio.errors.full_messages.each do |e| %>
-      <%= js add_gritter(e, :title => "Said Maadan", sticky: false) %>
+    <% portfolio.errors.full_messages.each do |error| %>
+      <%= alert_generator error %>
+      <%#= js add_gritter(flash[:error], :title => "Said Maadan", sticky: false) %>
     <% end %>
   <% end %>
   <div class="row">
