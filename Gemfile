@@ -69,5 +69,6 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
+gem 'redis', '~> 4.0', '>= 4.0.1'
 
 #gem 'inventive_labs_view_tool', git: 'https://github.com/saidmaadan/inventive_labs_view_tool'
