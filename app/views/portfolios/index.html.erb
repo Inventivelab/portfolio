@@ -1,27 +1,10 @@
 <div class="album text-muted">
   <div class="container">
+    <%= source_helper("alert alert-warning") %>
     <div class="row <%= "sortable" if logged_in?(:contributor) %>">
       <%= render partial: @portfolios %>
       <%#= render partial: @portfolios, spacer_template: 'portfolio_ruler'  %>
     </div>
   </div>
 </div>
-      <%#= link_to "Create New", new_portfolio_path if logged_in?(:site_admin) %>
-      <%# cache do %>
-        <%#= render partial: @portfolios, spacer_template: 'portfolio_ruler' %>
-      <%# end %>
-
-
-
-
-
-<%#= render partial: 'portfolio_item', collection: @portfolio_items %>
-
-
-
-
-<!--
-  if portfolio.thumb_image
-  if !portfolio.thumb_image.nil?
-  unless portfolio.thumb_image.nil?
- -->
+    
