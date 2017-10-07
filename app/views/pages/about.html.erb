@@ -4,10 +4,30 @@
     <hr>
     <div class="row">
       <div class="col-md-4">
-        <br>
         <!-- <img src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAsiAAAAJDhjYmZmZTdlLWRjMGEtNGIyYi04ODcwLTcyY2FiOTliNDEyMg.jpg" alt="" class="img-responsive" style="width:100%"> -->
-        <%= image_tag "profile.jpg", width: "100%", alt: "Profile Image" %>
+        <%= image_tag "profile.jpg", width: "100%", alt: "Profile Image" %><br>
+        <div class="about-skills">
+          <% @skills.each do |skill| %>
+            <div class="about-skill">
+              <h4><%= skill.title%></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  arial-valuemax='100'
+                  style="width: <%= skill.percent_utilized %>%"
+                  >
+
+                </div>
+            </div>
+
+          </div>
+          <% end %>
+        </div>
       </div>
+
+
 
       <div class="col-md-8">
 
