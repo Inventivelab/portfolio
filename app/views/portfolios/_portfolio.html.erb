@@ -1,8 +1,11 @@
-<div class="card" data-id="<%= portfolio.id %>">
-  <%= image_tag portfolio_img(portfolio.thumb_image, 'thumb') %>
-  <p class="card-text"><span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
-  </p>
+<div class="col-md-4 col-sm-6">
+  <div class="card" data-id="<%= portfolio.id %>">
+    <%= image_tag portfolio_img(portfolio.thumb_image, 'thumb'), width:'100%' %>
+    <p class="card-text"><span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
+    </p>
+  </div>
 </div>
+
 
 
 <%#= link_to "Edit", edit_portfolio_path(portfolio) if logged_in?(:site_admin) %>
