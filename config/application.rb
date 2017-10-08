@@ -22,6 +22,7 @@ Bundler.require(*Rails.groups)
 module InventivePortfolio
   class Application < Rails::Application
     config.eager_load_paths << "#{Rails.root}/lib"
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     # config.action_controller.permit_all_parameters = true
     config.generators do |g|
       g.orm             :active_record
