@@ -2,6 +2,16 @@
 @import "font-awesome";
 @import "gritter";
 
+@font-face{
+  font-family: 'Lato';
+  src:font-url("Lato-Regular.ttf")
+}
+
+@font-face{
+  font-family: 'Raboto Slab';
+  src:font-url("RabotoSlab-Regular.ttf")
+}
+
 /*
  * Globals
  */
@@ -28,6 +38,9 @@ a:hover {
  * Base structure
  */
 
+// font-family: 'Lato', sans-serif;
+// font-family: 'Roboto Slab', serif;
+
 html,
 body {
   height: 100%;
@@ -37,6 +50,17 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: 'Lato', sans-serif;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+  color: #333;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
