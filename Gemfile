@@ -73,4 +73,5 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 
+ruby "2.4.0"
 #gem 'inventive_labs_view_tool', git: 'https://github.com/saidmaadan/inventive_labs_view_tool'
