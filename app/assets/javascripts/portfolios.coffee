@@ -1,13 +1,13 @@
-myMoveable = undefined
+ready = undefined
 set_positions = undefined
 
 set_positions = ->
-  $(".card").each (i) ->
+  $('.card').each (i) ->
     $(this).attr 'data-pos', i + 1
     return
   return
 
-myMoveable = ->
+ready = ->
   set_positions()
   $('.sortable').sortable()
   $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
@@ -25,4 +25,4 @@ myMoveable = ->
     return
   return
 
-$(document).ready myMoveable
+$(document).ready ready
